@@ -11,6 +11,7 @@ class HomeTableViewCell: UITableViewCell {
     
     static let identifier = "homeTableViewCell"
 
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var gerneLabel: UILabel!
     @IBOutlet weak var titleENLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
