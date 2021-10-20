@@ -9,7 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
-
+    let mediaInformation = MediaInformation()
+    
+    @IBOutlet weak var homeTableView: UITableView!
+    
     @IBOutlet weak var homeViewSmall: UIView!
     @IBOutlet weak var homeMainLabel: UILabel!
     @IBOutlet weak var mainButton1: UIButton!
@@ -21,6 +24,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
     }
     
 
@@ -35,6 +40,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return UITableViewCell()
         }
         
+        let row = mediaInformation.tvShow[indexPath.row]
+        
+        cell.gerneLabel.text = "#\(row.genre)"
+        cell.titleENLabel.text = row.title
+        cell.posterImageView.image = UIImage(named: row.title)
+        cell.dateLabel.text = row.releaseDate
+        cell.titleKRLabel.text = row.title
         
         
         return cell
