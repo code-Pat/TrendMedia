@@ -9,7 +9,7 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     
-    static let identifier = "HomeTableViewCell"
+    static let identifier = "homeTableViewCell"
 
     @IBOutlet weak var gerneLabel: UILabel!
     @IBOutlet weak var titleENLabel: UILabel!
