@@ -50,14 +50,15 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-DT-PmD">
                                             <rect key="frame" x="50" y="102" width="300" height="100"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c91-lt-49S">
+                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c91-lt-49S">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="ONY-Vp-0Fr"/>
                                                         <constraint firstAttribute="width" constant="100" id="s74-6B-zCX"/>
                                                     </constraints>
+                                                    <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" buttonSize="large"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fc-vi-kDi">
                                                     <rect key="frame" x="100" y="0.0" width="100" height="100"/>
@@ -66,7 +67,7 @@
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="iko-vs-fRE"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-4W-0l9">
                                                     <rect key="frame" x="200" y="0.0" width="100" height="100"/>
@@ -75,7 +76,7 @@
                                                         <constraint firstAttribute="width" constant="100" id="pc2-fI-QeC"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -138,7 +139,16 @@
                                                                 <constraint firstAttribute="height" constant="25" id="va0-wM-eLg"/>
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain">
+                                                                <attributedString key="attributedTitle">
+                                                                    <fragment content="비슷한 컨텐츠 더보기...">
+                                                                        <attributes>
+                                                                            <font key="NSFont" size="10" name="AppleSDGothicNeo-Thin"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                            </buttonConfiguration>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -187,6 +197,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellView" destination="D63-Tk-1dW" id="8pw-GV-YrY"/>
                                             <outlet property="dateLabel" destination="BfV-JE-Bf4" id="fHV-xr-1lg"/>
                                             <outlet property="gerneLabel" destination="dh1-Cp-WO8" id="JVa-du-roh"/>
                                             <outlet property="posterImageView" destination="qjU-gO-CVS" id="Klh-v8-K0Q"/>
@@ -209,6 +220,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Trend Media" id="DgJ-Wq-kg2"/>
                     <connections>
+                        <outlet property="buttonView" destination="qrh-DT-PmD" id="trQ-qW-qV8"/>
                         <outlet property="homeMainLabel" destination="UQF-hK-kJe" id="j5f-FD-jBc"/>
                         <outlet property="homeTableView" destination="GZJ-Vp-9Ze" id="gET-N6-ots"/>
                         <outlet property="homeViewSmall" destination="80I-EY-iKc" id="bNc-o2-HKN"/>
