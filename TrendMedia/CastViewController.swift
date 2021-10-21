@@ -9,7 +9,7 @@ import UIKit
 
 class CastViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    let mediaInformation = MediaInformation()
     
     @IBOutlet weak var castTableView: UITableView!
 
