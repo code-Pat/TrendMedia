@@ -234,17 +234,59 @@
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="109.82142857142857"/>
         </scene>
-        <!--Cast View Controller-->
+        <!--출연/제작-->
         <scene sceneID="LKF-U7-fl6">
             <objects>
-                <viewController id="okU-9l-JUd" customClass="CastViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="castViewController" id="okU-9l-JUd" customClass="CastViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JS9-Yj-ThI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G7e-hG-gDt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="castTableViewCell" textLabel="E0W-IB-Z6r" detailTextLabel="LHB-ce-GeL" style="IBUITableViewCellStyleSubtitle" id="PMt-FK-LC8" customClass="CastTableViewCell" customModule="TrendMedia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PMt-FK-LC8" id="fUf-9t-Ube">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E0W-IB-Z6r">
+                                                    <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LHB-ce-GeL">
+                                                    <rect key="frame" x="20" y="22.5" width="30.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="castNameLabel" destination="E0W-IB-Z6r" id="6gs-5o-WZe"/>
+                                            <outlet property="roleNameLabel" destination="LHB-ce-GeL" id="Y0d-si-asK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vyX-3l-Gpa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G7e-hG-gDt" firstAttribute="top" secondItem="vyX-3l-Gpa" secondAttribute="top" id="Kee-QQ-APT"/>
+                            <constraint firstItem="vyX-3l-Gpa" firstAttribute="bottom" secondItem="G7e-hG-gDt" secondAttribute="bottom" id="PvU-YD-VO5"/>
+                            <constraint firstItem="vyX-3l-Gpa" firstAttribute="trailing" secondItem="G7e-hG-gDt" secondAttribute="trailing" id="esK-o4-eg6"/>
+                            <constraint firstItem="G7e-hG-gDt" firstAttribute="leading" secondItem="vyX-3l-Gpa" secondAttribute="leading" id="irH-r3-QRi"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="c4j-mk-ELD"/>
+                    <navigationItem key="navigationItem" title="출연/제작" id="c4j-mk-ELD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLk-xn-Rz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
