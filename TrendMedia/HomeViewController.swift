@@ -14,14 +14,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var buttonView: UIView!
     
-    
     @IBOutlet weak var homeViewSmall: UIView!
     @IBOutlet weak var homeMainLabel: UILabel!
     @IBOutlet weak var mainButton1: UIButton!
     @IBOutlet weak var mainButton2: UIButton!
     @IBOutlet weak var mainButton3: UIButton!
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +28,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         homeTableView.dataSource = self
         
         setUpViews()
+        
+//
+//        let cell = homeTableViewCell
+//        let tappedGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedView(_:)))
+//        cell!.cellView.addGestureRecognizer(tappedGesture)
     }
     
 
@@ -58,6 +61,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    /*
+    @objc func tappedView(_ gesture: UITapGestureRecognizer) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "castViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "castViewController")
+        present(vc, animated: true)
+    }
+    */
     
 }
 
