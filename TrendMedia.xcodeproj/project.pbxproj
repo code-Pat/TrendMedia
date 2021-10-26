@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B2109922727EDE00069070B /* MyMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2109912727EDE00069070B /* MyMediaViewController.swift */; };
+		6B2109942727EE9D0069070B /* MyMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2109932727EE9D0069070B /* MyMediaCell.swift */; };
 		6B21ACB62721677E0016EC33 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B21ACB52721677E0016EC33 /* CastTableViewCell.swift */; };
 		6BBD7D2E271FEE1700D072ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD7D2D271FEE1700D072ED /* AppDelegate.swift */; };
 		6BBD7D30271FEE1700D072ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD7D2F271FEE1700D072ED /* SceneDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B2109912727EDE00069070B /* MyMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaViewController.swift; sourceTree = "<group>"; };
+		6B2109932727EE9D0069070B /* MyMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaCell.swift; sourceTree = "<group>"; };
 		6B21ACB52721677E0016EC33 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
 		6BBD7D2A271FEE1700D072ED /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBD7D2D271FEE1700D072ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				6BBD7D41271FEFC100D072ED /* HomeViewController.swift */,
 				6BBD7D452720074500D072ED /* HomeTableViewCell.swift */,
 				6BBD7D43271FEFE800D072ED /* CastViewController.swift */,
+				6B2109912727EDE00069070B /* MyMediaViewController.swift */,
+				6B2109932727EE9D0069070B /* MyMediaCell.swift */,
 				6B21ACB52721677E0016EC33 /* CastTableViewCell.swift */,
 				6BBD7D36271FEE1E00D072ED /* Assets.xcassets */,
 				6BBD7D38271FEE1E00D072ED /* LaunchScreen.storyboard */,
@@ -158,6 +164,7 @@
 			files = (
 				6BBD7D462720074500D072ED /* HomeTableViewCell.swift in Sources */,
 				6BBD7D32271FEE1700D072ED /* ViewController.swift in Sources */,
+				6B2109942727EE9D0069070B /* MyMediaCell.swift in Sources */,
 				6BBD7D48272023F100D072ED /* Media.swift in Sources */,
 				6BBD7D2E271FEE1700D072ED /* AppDelegate.swift in Sources */,
 				6BBD7D30271FEE1700D072ED /* SceneDelegate.swift in Sources */,
@@ -165,6 +172,7 @@
 				6BBD7D42271FEFC100D072ED /* HomeViewController.swift in Sources */,
 				6BBD7D4A2720243300D072ED /* MediaInformation.swift in Sources */,
 				6B21ACB62721677E0016EC33 /* CastTableViewCell.swift in Sources */,
+				6B2109922727EDE00069070B /* MyMediaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
