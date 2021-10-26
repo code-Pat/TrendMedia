@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
         homeTableView.delegate = self
         homeTableView.dataSource = self
         
@@ -60,6 +60,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.cellView.layer.masksToBounds = false
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CastViewController") as! CastViewController
+        navigationController?.pushViewController(vc, animated: true)
+        
+//        let nav = UINavigationController(rootViewController: vc)
+//        navigationController?.pushViewController(nav, animated: true)
     }
     
     /*
