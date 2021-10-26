@@ -13,6 +13,7 @@ class CastTableViewCell: UITableViewCell {
     
     @IBOutlet weak var roleNameLabel: UILabel!
     @IBOutlet weak var castNameLabel: UILabel!
+    @IBOutlet weak var castImageView: UIImageView!
     
     
     override func awakeFromNib() {
