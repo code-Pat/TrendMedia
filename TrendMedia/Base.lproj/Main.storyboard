@@ -332,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="1789.8550724637682" y="109.82142857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--My Media View Controller-->
         <scene sceneID="Sgf-rD-gNJ">
             <objects>
-                <viewController id="5Yt-Yj-8ku" sceneMemberID="viewController">
+                <viewController id="5Yt-Yj-8ku" customClass="MyMediaViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="inU-wM-tca">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,6 +371,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kIP-gM-EPW"/>
+                    <connections>
+                        <outlet property="myMediaCollectionView" destination="tbk-aU-Z9r" id="3x0-Ts-l86"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpe-Zq-TAa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
