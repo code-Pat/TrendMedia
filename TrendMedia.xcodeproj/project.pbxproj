@@ -66,9 +66,10 @@
 		6BA51846272915AE006FE88D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6B2109912727EDE00069070B /* MyMediaViewController.swift */,
-				6BBD7D43271FEFE800D072ED /* CastViewController.swift */,
 				6BBD7D41271FEFC100D072ED /* HomeViewController.swift */,
+				6BBD7D43271FEFE800D072ED /* CastViewController.swift */,
+				6B2109912727EDE00069070B /* MyMediaViewController.swift */,
+				6BA5185327292379006FE88D /* SearchViewController.swift */,
 				6BBD7D31271FEE1700D072ED /* ViewController.swift */,
 			);
 			path = ViewController;
@@ -80,6 +81,7 @@
 				6BBD7D452720074500D072ED /* HomeTableViewCell.swift */,
 				6B21ACB52721677E0016EC33 /* CastTableViewCell.swift */,
 				6B2109932727EE9D0069070B /* MyMediaCell.swift */,
+				6BA5185527292398006FE88D /* SearchTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -88,8 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				6BBD7D33271FEE1700D072ED /* Main.storyboard */,
-				6BA5185527292398006FE88D /* SearchTableViewCell.swift */,
-				6BA5185327292379006FE88D /* SearchViewController.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
