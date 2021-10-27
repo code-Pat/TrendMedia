@@ -20,7 +20,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var mainButton2: UIButton!
     @IBOutlet weak var mainButton3: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
  
@@ -28,21 +27,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         homeTableView.dataSource = self
         
         setUpViews()
-        
-//
-//        let cell = homeTableViewCell
-//        let tappedGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedView(_:)))
-//        cell!.cellView.addGestureRecognizer(tappedGesture)
     }
     
-
+  
+    @IBAction func searchButton(_ sender: UIBarButtonItem) {
+        guard let searchVC = self.storyboard?.instantiateViewController(withIdentifier: "searchViewController") as? SearchViewController else { return }
+        self.navigationController?.pushViewController(searchVC, animated: true)
+    }
+    
+    @IBAction func bookButton(_ sender: UIButton) {
+        guard let myMediaVC = self.storyboard?.instantiateViewController(withIdentifier: "myMediaViewController") as? MyMediaViewController else { return }
+        self.navigationController?.pushViewController(myMediaVC, animated: true)
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
         }
@@ -67,18 +71,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CastViewController") as! CastViewController
         navigationController?.pushViewController(vc, animated: true)
-        
-//        let nav = UINavigationController(rootViewController: vc)
-//        navigationController?.pushViewController(nav, animated: true)
     }
-    
-    /*
-    @objc func tappedView(_ gesture: UITapGestureRecognizer) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "castViewController", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "castViewController")
-        present(vc, animated: true)
-    }
-    */
+
     
 }
 
@@ -109,3 +103,23 @@ extension HomeViewController {
 
     }
 }
+
+//Junk codes - just in case for a reuse
+/*
+ 
+let cell = homeTableViewCell
+let tappedGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedView(_:)))
+cell!.cellView.addGestureRecognizer(tappedGesture)
+ 
+ 
+ 
+ 
+ 
+ @objc func tappedView(_ gesture: UITapGestureRecognizer) {
+     let storyboard: UIStoryboard = UIStoryboard(name: "castViewController", bundle: nil)
+     let vc = storyboard.instantiateViewController(withIdentifier: "castViewController")
+     present(vc, animated: true)
+ }
+ 
+
+*/
