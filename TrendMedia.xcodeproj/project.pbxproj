@@ -10,6 +10,11 @@
 		6B2109922727EDE00069070B /* MyMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2109912727EDE00069070B /* MyMediaViewController.swift */; };
 		6B2109942727EE9D0069070B /* MyMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2109932727EE9D0069070B /* MyMediaCell.swift */; };
 		6B21ACB62721677E0016EC33 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B21ACB52721677E0016EC33 /* CastTableViewCell.swift */; };
+		6BA5184C27291DDD006FE88D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6BA5184B27291DDD006FE88D /* Kingfisher */; };
+		6BA5184F27291E4B006FE88D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6BA5184E27291E4B006FE88D /* Alamofire */; };
+		6BA5185227291E75006FE88D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6BA5185127291E75006FE88D /* SwiftyJSON */; };
+		6BA5185427292379006FE88D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5185327292379006FE88D /* SearchViewController.swift */; };
+		6BA5185627292398006FE88D /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5185527292398006FE88D /* SearchTableViewCell.swift */; };
 		6BBD7D2E271FEE1700D072ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD7D2D271FEE1700D072ED /* AppDelegate.swift */; };
 		6BBD7D30271FEE1700D072ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD7D2F271FEE1700D072ED /* SceneDelegate.swift */; };
 		6BBD7D32271FEE1700D072ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD7D31271FEE1700D072ED /* ViewController.swift */; };
@@ -27,6 +32,8 @@
 		6B2109912727EDE00069070B /* MyMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaViewController.swift; sourceTree = "<group>"; };
 		6B2109932727EE9D0069070B /* MyMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaCell.swift; sourceTree = "<group>"; };
 		6B21ACB52721677E0016EC33 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
+		6BA5185327292379006FE88D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6BA5185527292398006FE88D /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6BBD7D2A271FEE1700D072ED /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBD7D2D271FEE1700D072ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BBD7D2F271FEE1700D072ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +54,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA5185227291E75006FE88D /* SwiftyJSON in Frameworks */,
+				6BA5184C27291DDD006FE88D /* Kingfisher in Frameworks */,
+				6BA5184F27291E4B006FE88D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BA51846272915AE006FE88D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6B2109912727EDE00069070B /* MyMediaViewController.swift */,
+				6BBD7D43271FEFE800D072ED /* CastViewController.swift */,
+				6BBD7D41271FEFC100D072ED /* HomeViewController.swift */,
+				6BBD7D31271FEE1700D072ED /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6BA51847272915C2006FE88D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6BBD7D452720074500D072ED /* HomeTableViewCell.swift */,
+				6B21ACB52721677E0016EC33 /* CastTableViewCell.swift */,
+				6B2109932727EE9D0069070B /* MyMediaCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6BA51848272915D7006FE88D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6BBD7D33271FEE1700D072ED /* Main.storyboard */,
+				6BA5185527292398006FE88D /* SearchTableViewCell.swift */,
+				6BA5185327292379006FE88D /* SearchViewController.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6BA51849272915ED006FE88D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6BBD7D47272023F100D072ED /* Media.swift */,
+				6BBD7D492720243300D072ED /* MediaInformation.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		6BBD7D21271FEE1700D072ED = {
 			isa = PBXGroup;
 			children = (
@@ -72,18 +122,12 @@
 		6BBD7D2C271FEE1700D072ED /* TrendMedia */ = {
 			isa = PBXGroup;
 			children = (
+				6BA51849272915ED006FE88D /* Data */,
+				6BA51848272915D7006FE88D /* Storyboard */,
+				6BA51847272915C2006FE88D /* Cell */,
+				6BA51846272915AE006FE88D /* ViewController */,
 				6BBD7D2D271FEE1700D072ED /* AppDelegate.swift */,
 				6BBD7D2F271FEE1700D072ED /* SceneDelegate.swift */,
-				6BBD7D31271FEE1700D072ED /* ViewController.swift */,
-				6BBD7D33271FEE1700D072ED /* Main.storyboard */,
-				6BBD7D47272023F100D072ED /* Media.swift */,
-				6BBD7D492720243300D072ED /* MediaInformation.swift */,
-				6BBD7D41271FEFC100D072ED /* HomeViewController.swift */,
-				6BBD7D452720074500D072ED /* HomeTableViewCell.swift */,
-				6BBD7D43271FEFE800D072ED /* CastViewController.swift */,
-				6B2109912727EDE00069070B /* MyMediaViewController.swift */,
-				6B2109932727EE9D0069070B /* MyMediaCell.swift */,
-				6B21ACB52721677E0016EC33 /* CastTableViewCell.swift */,
 				6BBD7D36271FEE1E00D072ED /* Assets.xcassets */,
 				6BBD7D38271FEE1E00D072ED /* LaunchScreen.storyboard */,
 				6BBD7D3B271FEE1E00D072ED /* Info.plist */,
@@ -107,6 +151,11 @@
 			dependencies = (
 			);
 			name = TrendMedia;
+			packageProductDependencies = (
+				6BA5184B27291DDD006FE88D /* Kingfisher */,
+				6BA5184E27291E4B006FE88D /* Alamofire */,
+				6BA5185127291E75006FE88D /* SwiftyJSON */,
+			);
 			productName = TrendMedia;
 			productReference = 6BBD7D2A271FEE1700D072ED /* TrendMedia.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +184,11 @@
 				Base,
 			);
 			mainGroup = 6BBD7D21271FEE1700D072ED;
+			packageReferences = (
+				6BA5184A27291DDD006FE88D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				6BA5184D27291E4B006FE88D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6BA5185027291E75006FE88D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 6BBD7D2B271FEE1700D072ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,7 +222,9 @@
 				6BBD7D48272023F100D072ED /* Media.swift in Sources */,
 				6BBD7D2E271FEE1700D072ED /* AppDelegate.swift in Sources */,
 				6BBD7D30271FEE1700D072ED /* SceneDelegate.swift in Sources */,
+				6BA5185427292379006FE88D /* SearchViewController.swift in Sources */,
 				6BBD7D44271FEFE800D072ED /* CastViewController.swift in Sources */,
+				6BA5185627292398006FE88D /* SearchTableViewCell.swift in Sources */,
 				6BBD7D42271FEFC100D072ED /* HomeViewController.swift in Sources */,
 				6BBD7D4A2720243300D072ED /* MediaInformation.swift in Sources */,
 				6B21ACB62721677E0016EC33 /* CastTableViewCell.swift in Sources */,
@@ -390,6 +446,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6BA5184A27291DDD006FE88D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		6BA5184D27291E4B006FE88D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		6BA5185027291E75006FE88D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6BA5184B27291DDD006FE88D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BA5184A27291DDD006FE88D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		6BA5184E27291E4B006FE88D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BA5184D27291E4B006FE88D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6BA5185127291E75006FE88D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BA5185027291E75006FE88D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6BBD7D22271FEE1700D072ED /* Project object */;
 }
